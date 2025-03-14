@@ -1,0 +1,36 @@
+#include <iostream>
+#include "Person.h"
+
+using namespace std;
+
+int main()
+{
+    //Write a program that takes a positive integer as input and repeatedly multiplies its digits until the result is a single-digit number.
+    int number;
+
+    cout << "Enter a positive integer:";
+    cin >> number;
+
+    if (number < 0) 
+    {
+        cout << "Error, the integer must be positive!" << endl;
+        return 1;
+    }
+    while (number >= 10) 
+    {
+        int sum = 1;
+        while (number > 0) {
+            sum *= number % 10;
+            number /= 10;
+
+           
+        }
+        number = sum;
+    }
+    cout << "Final single-digit sum: " << number << endl;
+
+
+}
+
+
+  
